@@ -12,7 +12,7 @@ import oscarQuevedoImg from './oscarquevedo.jpg'
 import matiasMenichImg from './matiasmenich.jpg'
 import rodrigoLafuenteImg from './rodrigolafuente.jpg'
 import mijaelFeldmanImg from './mijaelfeldman.jpg'
-import anibalMadridImg from './anibalMadrid.jpg'
+import anibalMadridImg from './anibalmadrid.jpg'
 
 export default function Founders() {
 
