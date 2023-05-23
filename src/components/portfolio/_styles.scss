@@ -1,9 +1,10 @@
+@use 'sass:math';
 @import '../../styles/variables';
 
 $portfolio-padding: 10rem;
 
 .portfolio {
-  padding: $portfolio-padding/2 0;
+  padding: math.div($portfolio-padding, 2) 0;
   overflow: hidden;
   width: 100%;
 
