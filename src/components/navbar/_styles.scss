@@ -2,17 +2,52 @@
 
 .navbar {
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 20;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 80px;
+  border-radius: 16px;
+
+
+  &:before {
+    background: rgba($dark-jungle-color, .7);
+    backdrop-filter: blur(12px);
+    content: '';
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    border-radius: 1rem;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    z-index: -1;
+  }
 
   .navbar__logo {
-    height: 36px;
+    height: 32px;
+    align-self: center;
     width: auto;
+    margin-left: .5rem;
+  }
+
+  .navbar__hamburger-menu {
+    height: 36px;
+    width: 36px;
+    display: block;
+
+    @include md {
+      display: none;
+    }
   }
 
   .navbar__links {
-    display: flex;
+    display: none;
+    margin-right: .5rem;
+
+    @include md {
+      display: flex;
+    }
   }
 
   .navbar__link {

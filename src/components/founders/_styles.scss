@@ -26,24 +26,39 @@
   }
 
   .founders__description {
-    max-width: 380px;
+    max-width: 100%;
+
+    @include lg {
+      max-width: 360px;
+    }
+  }
+
+  .partners__description {
+    max-width: 100%;
+    order: 1;
+
+    @include lg {
+      max-width: 360px;
+    }
   }
 
   .scrolling-banner {
     margin-top: 5rem;
+    margin-bottom: 5rem;
   }
 
   svg[width='0'] { position: absolute }
 
   .blob1 {
     position: absolute;
-    bottom: -5%;
+    bottom: 0%;
     left: -12%;
     z-index: -1;
-    height: 70%;
+    height: 80%;
     width: 30%;
-    transform: rotate(20deg);
-    background: linear-gradient(10deg, $blue-bolt-color, $seashell-color, $jungle-green-color);
+    opacity: .8;
+    transform: rotate(90deg);
+    background: linear-gradient(50deg, $seashell-color, $pastel-brown-color);
   }
 
   .blob2 {
@@ -53,6 +68,7 @@
     z-index: -1;
     height: 60%;
     width: 30%;
+    opacity: .8;
     transform: rotate(-40deg);
   }
 
@@ -65,6 +81,10 @@
     opacity: .3;
     background-position: 0px -120px;
     z-index: -1;
+
+    &.pattern-bg-2 {
+      top: 60%;
+    }
   }
 
   .founders__list {
@@ -77,6 +97,23 @@
     @include xl {
       margin-top: 0;
       margin-left: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .partners__list {
+    display: grid;
+    order: 2;
+    flex-grow: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+
+    @include xl {
+      order: 1;
+      margin-top: 0;
+      margin-right: 2rem;
       grid-template-columns: repeat(3, 1fr);
     }
   }
@@ -100,6 +137,7 @@
       height: 100px;
       width: 100%;
       object-fit: cover;
+      min-height: 200px;
 
       @include md {
         min-height: 310px;
@@ -111,18 +149,23 @@
       padding: 1rem;
       padding-bottom: .125rem;
       font-size: 1rem;
-
-      @include md {
-        font-size: 1.5rem;
-      }
     }
 
     small {
       opacity: .6;
-      font-size: 1rem;
+      font-size: .8rem;
       font-weight: bold;
       padding: 0 1rem;
       padding-bottom: 1rem;
+    }
+
+    @include md {
+      p {
+        font-size: 1.5rem;
+      }
+      small {
+        font-size: 1rem;
+      }
     }
   }
 }

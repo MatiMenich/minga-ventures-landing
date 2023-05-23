@@ -3,40 +3,24 @@ import React from 'react'
 import './_styles.scss'
 
 import fintocLogo from './fintoc-logo.png'
-import examediLogo from './examedi-logo.png'
-import tokuLogo from './toku-logo.png'
-import pluttoLogo from './plutto-logo.png'
+import neatLogo from './neat-logo.png'
 
 export default function Portfolio() {
   const companies = [
-    {
-      name: 'Examedi',
-      industry: 'Healthtech',
-      year: '2021',
-      image: examediLogo,
-      website: 'https://examedi.cl',
-    },
     {
       name: 'Fintoc',
       industry: 'Fintech',
       year: '2023',
       image: fintocLogo,
-      website: 'https://fintoc.com',
+      website: 'https://fintoc.com?utm_source=mingaventures',
     },
     {
-      name: 'Plutto',
+      name: 'Neat',
       industry: 'Fintech',
-      year: '2022',
-      image: pluttoLogo,
-      website: 'https://getplutto.com',
-    },
-    {
-      name: 'Toku',
-      industry: 'Fintech',
-      year: '2021',
-      image: tokuLogo,
-      website: 'https://trytoku.com',
-    },
+      year: '2023',
+      image: neatLogo,
+      website: 'https://neatpagos.com?utm_source=mingaventures',
+    }
   ]
 
   return (
@@ -54,7 +38,7 @@ export default function Portfolio() {
             ))
           }
         </div>
-        <a href='#a' className='portfolio__link'>Conoce a todos &gt;</a>
+        {/* <a href='#a' className='portfolio__link'>Conoce a todos &gt;</a> */}
       </div>
     </section>
   )

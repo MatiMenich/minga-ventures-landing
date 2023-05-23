@@ -3,6 +3,7 @@
 .scrolling-banner {
   width: 100%;
   border-top: 1px solid $jungle-green-color;
+  border-bottom: 1px solid $jungle-green-color;
   overflow: hidden;
 
   .scrolling-banner__inner {

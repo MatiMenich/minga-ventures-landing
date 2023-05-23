@@ -1,14 +1,21 @@
 @import '../../styles/variables';
 
+$portfolio-padding: 10rem;
+
 .portfolio {
-  padding: 5rem 0;
+  padding: $portfolio-padding/2 0;
   overflow: hidden;
   width: 100%;
+
+  @include lg {
+    padding: $portfolio-padding 0;
+  }
 
   h2 {
     text-align: center;
     margin-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+
     @include md {
       font-size: 2rem;
     }

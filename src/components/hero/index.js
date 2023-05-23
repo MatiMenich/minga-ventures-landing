@@ -12,8 +12,8 @@ export default function Hero() {
 
         <h1>Aliados tempranos de <i className='underline'>fundadores increíbles</i></h1>
         <div>
-          <button className='button-cta d-none d-md-inline-flex'>Contáctanos &gt;</button>&nbsp;
-          <button className='button-cta'>Postula ahora &gt;</button>
+          <a className='button-cta' href="mailto:contacto@minga.ventures">Contáctanos &gt;</a>&nbsp;
+          <a className='button-cta' href="https://google.com">Postula ahora &gt;</a>
         </div>
       </div>
 

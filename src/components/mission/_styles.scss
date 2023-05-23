@@ -1,10 +1,16 @@
 @import '../../styles/variables';
 
+$mission-padding: 10rem;
+
 .mission {
   background-color: $jungle-green-color;
-  padding: 5rem 0;
+  padding: $mission-padding/2 0;
   position: relative;
   overflow: hidden;
+
+  @include lg {
+    padding: $mission-padding 0;
+  }
 
 
   .mission__container {

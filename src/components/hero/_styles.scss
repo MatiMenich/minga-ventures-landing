@@ -1,13 +1,26 @@
 @import '../../styles/variables';
 
-$hero-padding: 8rem;
+$hero-padding: 15rem;
 
 .hero {
   background-color: $seashell-color;
   color: $dark-jungle-color;
-  padding-top: $hero-padding;
+  padding-top: $hero-padding/2;
   position: relative;
   z-index: 4;
+
+  .button-cta + .button-cta {
+    margin-top: 1rem;
+
+    @include md {
+      margin-top: 0;
+    }
+  }
+
+
+  @include lg {
+    padding-top: $hero-padding;
+  }
 
   .container {
     display: flex;
@@ -26,7 +39,11 @@ $hero-padding: 8rem;
   }
 
   .scrolling-banner {
-    margin-top: $hero-padding;
+    margin-top: $hero-padding/2;
+
+    @include lg {
+      margin-top: $hero-padding;
+    }
   }
 
   .pattern-bg {

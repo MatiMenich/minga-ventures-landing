@@ -13,7 +13,7 @@ export default function Mission() {
           </svg>
         </p>
 
-        <a href="#a">Lee nuestro whitepaper &gt;</a>
+        {/* <a href="#a">Lee nuestro whitepaper &gt;</a> */}
       </div>
 
 

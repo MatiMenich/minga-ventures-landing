@@ -3,61 +3,93 @@ import React from 'react'
 import './_styles.scss'
 import ScrollingBanner from '../scrolling banner'
 import Blob from '../blob'
-import founder1Img from './founder1.jpg'
-import founder2Img from './founder2.jpg'
-import founder3Img from './founder3.jpg'
-import founder4Img from './founder4.jpg'
+import cristobalGrifferoImg from './cristobalgriffero.jpg'
+import javierBenavidesImg from './javierbenavides.jpg'
+import nicolasChaconImg from './nicolaschacon.jpg'
+import lukasZorichImg from './lukaszorich.jpg'
+import franciscoBarredaImg from './franciscobarreda.jpg'
+import oscarQuevedoImg from './oscarquevedo.jpg'
+import matiasMenichImg from './matiasmenich.jpg'
+import rodrigoLafuenteImg from './rodrigolafuente.jpg'
+import mijaelFeldmanImg from './mijaelfeldman.jpg'
+import anibalMadridImg from './anibalMadrid.jpg'
 
 export default function Founders() {
 
   const foundersList = [
     {
-      name: 'Chipa Mogli',
-      image: founder1Img,
-      company: 'Examedi',
+      name: 'Cristobal Griffero',
+      image: cristobalGrifferoImg,
+      company: 'Fintoc',
       linkedinProfile: 'https://www.linkedin.com/in/chipa-mogli/',
     },
     {
-      name: 'La Mojo Jojo',
-      image: founder2Img,
+      name: 'Nicolás Chacón',
+      image: nicolasChaconImg,
+      company: 'Neat',
+      linkedinProfile: 'https://www.linkedin.com/in/nicol%C3%A1s-chac%C3%B3n/',
+    },
+    {
+      name: 'Javier Benavides',
+      image: javierBenavidesImg,
+      company: 'Neat',
+      linkedinProfile: 'https://www.linkedin.com/in/jabenavi/',
+    },
+    {
+      name: 'Lukas Zorich',
+      image: lukasZorichImg,
       company: 'Fintoc',
-      linkedinProfile: 'https://www.linkedin.com/in/la-mojo-jojo/',
+      linkedinProfile: 'https://www.linkedin.com/in/lezorich/',
+    },
+  ]
+
+  const partnersList = [
+    {
+      name: 'Francisco Barreda',
+      image: franciscoBarredaImg,
+      title: 'General partner',
+      linkedinProfile: 'https://www.linkedin.com/in/francisco-barreda-22477157/',
     },
     {
-      name: 'El Tonto Wn',
-      image: founder3Img,
-      company: 'Plutto',
-      linkedinProfile: 'https://www.linkedin.com/in/el-tonto-wn/',
+      name: 'Mijael Feldman',
+      image: mijaelFeldmanImg,
+      title: 'Limited partner',
+      linkedinProfile: 'https://www.linkedin.com/in/mijaelfeldman/',
     },
     {
-      name: 'La Calila',
-      image: founder4Img,
-      company: 'Toku',
-      linkedinProfile: 'https://www.linkedin.com/in/la-calila/',
+      name: 'Rodrigo Lafuente',
+      image: rodrigoLafuenteImg,
+      title: 'General partner',
+      linkedinProfile: 'https://www.linkedin.com/in/rodrigolafuentes/',
     },
     {
-      name: 'Tu Ex',
-      image: founder2Img,
-      company: 'Examedi',
-      linkedinProfile: 'https://www.linkedin.com/in/tu-ex/',
+      name: 'Anibal Madrid',
+      image: anibalMadridImg,
+      title: 'Limited partner',
+      linkedinProfile: 'https://www.linkedin.com/in/anibalmadrid/',
     },
     {
-      name: 'Tu Papá',
-      image: founder1Img,
-      company: 'Fintoc',
-      linkedinProfile: 'https://www.linkedin.com/in/tu-papa/',
+      name: 'Matías Menich',
+      image: matiasMenichImg,
+      title: 'General partner',
+      linkedinProfile: 'https://www.linkedin.com/in/matimenich/',
+    },
+    {
+      name: 'Óscar Quevedo',
+      image: oscarQuevedoImg,
+      title: 'General partner',
+      linkedinProfile: 'https://www.linkedin.com/in/oquevedo/',
     },
   ]
   return (
-    <section className="founders" id="founders">
-      {/* <Blob className="blob1"/> */}
+    <section className="founders">
+      <Blob className="blob1"/>
       <Blob className="blob2"/>
 
-      <div className="container">
+      <div className="container" id="founders">
         <div className='founders__description'>
           <h2>Nuestros fundadores</h2>
-          <p>Acá tamos pa lo que quiera compare, ud. diga nomá y le ponemoh weno. Pero weno weno, la pulenta. Si no entramoh en prolema y ahí quedaste. Gil ql. Sabi que má, no te pienso poner niuna wea de plata. Saco wea. Tonto wn leyendo esta weá. </p>
-          <a href="#a">Conoce a todos &gt;</a>
+          <p>Nos enorgullecemos de respaldar a los que son los catalizadores de la innovación y los arquitectos de empresas disruptivas. Su visión única, experiencia y determinación son fundamentales para construir el éxito. </p>
         </div>
         <div className='founders__list'>
           {
@@ -69,12 +101,32 @@ export default function Founders() {
             </a>
             )
           }
-
         </div>
       </div>
 
       <div className='pattern-bg'/>
+      <div className='pattern-bg pattern-bg-2'/>
       <ScrollingBanner reverse={true} />
+
+      <div className='container' id="partners">
+
+        <div className='partners__list'>
+          {
+            partnersList.map((partner) =>
+            <a className="founder-card" key={partner.name} href={partner.linkedinProfile} target='_blank' rel="noreferrer">
+              <img src={partner.image} alt=""/>
+              <p>{partner.name}</p>
+              <small>{partner.title}</small>
+            </a>
+            )
+          }
+        </div>
+
+        <div className='partners__description'>
+          <h2>Nuestros <b>partners</b></h2>
+          <p>Los fundadores necesitan más que capital para construir una gran empresa. Se necesita gente que entienda el viaje emprendedor y que sepa lo que se necesita, en especial al principio. Es por eso que <b>todos nuestros partners fueron o son activamente emprendedores</b>.</p>
+        </div>
+      </div>
     </section>
   )
 }

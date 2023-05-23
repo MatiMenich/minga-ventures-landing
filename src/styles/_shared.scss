@@ -28,6 +28,7 @@
 }
 
 .button-cta {
+  display: inline-flex;
   border: 2px solid $jungle-green-color;
   color: $jungle-green-color;
   padding: 0.75rem 1rem;
@@ -36,6 +37,7 @@
   background: none;
   cursor: pointer;
   transition: all .3s ease;
+  text-decoration: none;
 
   &:hover {
     background: $jungle-green-color;
@@ -60,39 +62,37 @@ $display-types: inline, inline-block, block, grid, table, table-row, table-cell,
 @each $type in $display-types {
 
   .d-#{$type} {
-    display: $type;
+    display: $type!important;
   }
 
-  @include xxl {
-    .d-xxl-#{$type} {
-      display: $type !important;
-    }
-  }
-
-  @include xl {
-    .d-xl-#{$type} {
-      display: $type !important;
-    }
-  }
-
-  @include lg {
-    .d-lg-#{$type} {
-      display: $type !important;
-    }
-  }
-
-
-  @include md {
-    .d-md-#{$type} {
-      display: $type !important;
-    }
-  }
-
-  @include sm {
+  @media (min-width: #{$screen-sm-min}) {
     .d-sm-#{$type} {
-      display: $type !important;
+      display: $type!important;
     }
   }
 
+  @media (min-width: #{$screen-md-min}) {
+    .d-md-#{$type} {
+      display: $type!important;
+    }
+  }
+
+  @media (min-width: #{$screen-lg-min}) {
+    .d-lg-#{$type} {
+      display: $type!important;
+    }
+  }
+
+  @media (min-width: #{$screen-xl-min}) {
+    .d-xl-#{$type} {
+      display: $type!important;
+    }
+  }
+
+  @media (min-width: #{$screen-xxl-min}) {
+    .d-xxl-#{$type} {
+      display: $type!important;
+    }
+  }
 
 }

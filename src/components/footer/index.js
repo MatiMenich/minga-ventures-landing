@@ -9,16 +9,16 @@ export default function Footer() {
     <section className="footer">
       <div className='pattern-bg'></div>
       <div className="container d-flex align-items-center justify-content-between">
-        <div>
+
           <img src={LogoIMG} alt="Minga Ventures Logo Alt"/>
           <p>Minga Ventures© 2023</p>
-        </div>
-        <div className='footer__links'>
+
+        {/* <div className='footer__links'>
           <a href="#a" className="footer__link">Press Kit</a>
           <a href="#b" className="footer__link">Newsletter</a>
           <a href="#c" className="footer__link">Trabajos</a>
           <a href="#d" className="footer__link">Legal</a>
-        </div>
+        </div> */}
       </div>
     </section>
   )
