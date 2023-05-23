@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.footer {
+  position: relative;
+  padding-bottom: 3rem;
+
+  .pattern-bg {
+    position: relative;
+    height: 72px;
+    background-position: 0 -20px;
+    width: 100%;
+    opacity: .2;
+    top: 0;
+    left: 0;
+    margin-bottom: 3rem;
+  }
+
+  p {
+    margin-top: .25rem;
+    margin-bottom: 0;
+  }
+
+  .footer__link {
+    color: $seashell-color;
+    text-decoration: none;
+
+    + .footer__link {
+      margin-left: 1rem;
+    }
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}

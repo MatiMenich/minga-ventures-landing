@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.scrolling-banner {
+  width: 100%;
+  border-top: 1px solid $jungle-green-color;
+  overflow: hidden;
+
+  .scrolling-banner__inner {
+    display: flex;
+    width: fit-content;
+    animation-name: loop;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: var(--duration);
+    animation-direction: var(--direction);
+  }
+
+  .scrolling-banner__phrase {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    white-space: nowrap;
+  }
+
+  svg.scrolling-banner__divider {
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    fill: $jungle-green-color;
+    opacity: .5;
+  }
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

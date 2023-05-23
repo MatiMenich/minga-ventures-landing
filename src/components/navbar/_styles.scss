@@ -1,0 +1,31 @@
+@import '../../styles/variables';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  .navbar__logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .navbar__links {
+    display: flex;
+  }
+
+  .navbar__link {
+    color: $seashell-color;
+    text-decoration: none;
+    font-size: 1.125rem;
+
+    &:active, &:hover {
+      text-decoration: underline;
+    }
+
+    + .navbar__link {
+      margin-left: 1rem;
+    }
+  }
+}

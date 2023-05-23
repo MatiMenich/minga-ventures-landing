@@ -1,0 +1,28 @@
+@import './variables';
+@import './normalize';
+@import './shared';
+
+html {
+  color: $seashell-color;
+  background: $dark-jungle-color;
+}
+
+body {
+  color: $seashell-color;
+  background: $dark-jungle-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $heading-font;
+}
+
+a {
+  color: $blue-bolt-color;
+}
+
+
+// * {
+//   background: #000 !important;
+//   color: #0f0 !important;
+//   outline: solid #f00 1px !important;
+// }

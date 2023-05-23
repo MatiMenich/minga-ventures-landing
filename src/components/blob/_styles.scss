@@ -1,0 +1,17 @@
+@import '../../styles/variables';
+
+.blob {
+	border-radius: 50%; /* turn square to disc */
+	background: /* throw in different colours */
+    linear-gradient(
+      10deg,
+      $pastel-brown-color,
+      $seashell-color,
+    );
+		// gradient($jungle-green-color, $pastel-brown-color, 20deg);
+	filter: url(#grainy-blur) /* the magic */
+}
+
+svg {
+  height: 0;
+}
