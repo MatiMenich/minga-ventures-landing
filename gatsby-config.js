@@ -10,6 +10,14 @@ module.exports = {
     "gatsby-plugin-sass",
     `gatsby-plugin-netlify`,
     // "gatsby-plugin-google-gtag",
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-T5ZLDMP",
+        includeInDevelopment: false,
+        enableWebVitalsTracking: true,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap", {
       resolve: 'gatsby-plugin-manifest',
