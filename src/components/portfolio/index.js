@@ -30,7 +30,7 @@ export default function Portfolio() {
         <div className="company-list">
           {
             companies.map((company) => (
-              <a className="company-card" href={company.website} target='_blank' rel="noreferrer">
+              <a className="company-card" href={company.website} target='_blank' rel="noreferrer" key={company.name}>
                 <img src={company.image} alt={company.name}/>
                 <h3>{company.name}</h3>
                 <p>{company.industry} / {company.year}</p>

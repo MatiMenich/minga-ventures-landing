@@ -18,10 +18,10 @@ export default function Founders() {
 
   const foundersList = [
     {
-      name: 'Cristobal Griffero',
-      image: cristobalGrifferoImg,
-      company: 'Fintoc',
-      linkedinProfile: 'https://www.linkedin.com/in/chipa-mogli/',
+      name: 'Javier Benavides',
+      image: javierBenavidesImg,
+      company: 'Neat',
+      linkedinProfile: 'https://www.linkedin.com/in/jabenavi/',
     },
     {
       name: 'Nicolás Chacón',
@@ -30,10 +30,10 @@ export default function Founders() {
       linkedinProfile: 'https://www.linkedin.com/in/nicol%C3%A1s-chac%C3%B3n/',
     },
     {
-      name: 'Javier Benavides',
-      image: javierBenavidesImg,
-      company: 'Neat',
-      linkedinProfile: 'https://www.linkedin.com/in/jabenavi/',
+      name: 'Cristobal Griffero',
+      image: cristobalGrifferoImg,
+      company: 'Fintoc',
+      linkedinProfile: 'https://www.linkedin.com/in/chipa-mogli/',
     },
     {
       name: 'Lukas Zorich',
@@ -47,37 +47,49 @@ export default function Founders() {
     {
       name: 'Francisco Barreda',
       image: franciscoBarredaImg,
-      title: 'General partner',
+      generalPartner: true,
+      tag: 'Legal Tech',
+      company: 'Barreda Legal Tech',
       linkedinProfile: 'https://www.linkedin.com/in/francisco-barreda-22477157/',
     },
     {
       name: 'Mijael Feldman',
       image: mijaelFeldmanImg,
-      title: 'Limited partner',
+      generalPartner: false,
+      tag: 'Finance',
+      company: 'getxerpa',
       linkedinProfile: 'https://www.linkedin.com/in/mijaelfeldman/',
     },
     {
       name: 'Rodrigo Lafuente',
       image: rodrigoLafuenteImg,
-      title: 'General partner',
+      generalPartner: true,
+      tag: 'VC / Tech',
+      company: 'ISC / Methodo',
       linkedinProfile: 'https://www.linkedin.com/in/rodrigolafuentes/',
     },
     {
       name: 'Anibal Madrid',
       image: anibalMadridImg,
-      title: 'Limited partner',
+      generalPartner: false,
+      tag: 'Hardtech',
+      company: 'SoyMomo',
       linkedinProfile: 'https://www.linkedin.com/in/anibalmadrid/',
     },
     {
       name: 'Matías Menich',
       image: matiasMenichImg,
-      title: 'General partner',
+      generalPartner: true,
+      tag: 'Fintech',
+      company: 'QVO / Kushki',
       linkedinProfile: 'https://www.linkedin.com/in/matimenich/',
     },
     {
       name: 'Óscar Quevedo',
       image: oscarQuevedoImg,
-      title: 'General partner',
+      generalPartner: true,
+      tag: 'Marketing / Cultura',
+      company: 'QVO / Kushki',
       linkedinProfile: 'https://www.linkedin.com/in/oquevedo/',
     },
   ]
@@ -113,10 +125,12 @@ export default function Founders() {
         <div className='partners__list'>
           {
             partnersList.map((partner) =>
-            <a className="founder-card" key={partner.name} href={partner.linkedinProfile} target='_blank' rel="noreferrer">
+            <a className="founder-card partner-card" key={partner.name} href={partner.linkedinProfile} target='_blank' rel="noreferrer">
               <img src={partner.image} alt=""/>
               <p>{partner.name}</p>
-              <small>{partner.title}</small>
+              <small>{partner.company}</small>
+              <p className='partner-tag'>{partner.tag}</p>
+              <div className={`partner-category-tag ${partner.generalPartner ? 'partner-category-tag--gp' : ''}`}>{partner.generalPartner ? 'General partner' : 'Venture partner'}</div>
             </a>
             )
           }

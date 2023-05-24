@@ -1,14 +1,27 @@
 @import '../../styles/variables';
 
 .navbar {
-  display: flex;
   position: sticky;
   top: 0;
   z-index: 20;
-  justify-content: space-between;
   align-items: center;
   height: 80px;
-  border-radius: 16px;
+  border-radius: 1rem;
+  transition: height ease-in-out .2s;
+  overflow: hidden;
+
+  .navbar__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  &.navbar--active {
+    // height: 336px;
+    height: 260px;
+  }
 
 
   &:before {
@@ -25,10 +38,14 @@
   }
 
   .navbar__logo {
-    height: 32px;
     align-self: center;
-    width: auto;
     margin-left: .5rem;
+    display: inline-flex;
+
+    img {
+      height: 32px;
+      width: auto;
+    }
   }
 
   .navbar__hamburger-menu {
@@ -48,19 +65,39 @@
     @include md {
       display: flex;
     }
+
+    .navbar__link {
+      color: $seashell-color;
+      text-decoration: none;
+      font-size: 1.125rem;
+
+      &:active, &:hover {
+        text-decoration: underline;
+      }
+
+      + .navbar__link {
+        margin-left: 1rem;
+      }
+    }
+
+    &.navbar__mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+
+      .navbar__link + .navbar__link {
+        margin-left: 0;
+        margin-top: 1rem;
+      }
+    }
   }
 
-  .navbar__link {
+  .button-cta {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    display: block;
+    border-color: $seashell-color;
     color: $seashell-color;
-    text-decoration: none;
-    font-size: 1.125rem;
-
-    &:active, &:hover {
-      text-decoration: underline;
-    }
-
-    + .navbar__link {
-      margin-left: 1rem;
-    }
   }
 }

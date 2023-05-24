@@ -1,13 +1,13 @@
 import React from 'react'
 
-import './_styles.scss'
-
 import ScrollingBanner from '../scrolling banner'
 import Blob from '../blob'
 
+import './_styles.scss'
+
 export default function Hero() {
   return (
-    <section className='hero'>
+    <section className='hero' id='hero'>
       <div className="container">
 
         <h1>Aliados tempranos de <i className='underline'>fundadores increíbles</i></h1>

@@ -127,7 +127,7 @@
     display: flex;
     flex-direction: column;
     text-decoration: none;
-
+    position: relative;
 
     &:hover {
       background-color: darken($pastel-brown-color, 5%);
@@ -167,5 +167,54 @@
         font-size: 1rem;
       }
     }
+
+    &.partner-card {
+      .partner-category-tag {
+        position: absolute;
+        font-size: .6rem;
+        font-weight: bold;
+        border-radius: .25rem;
+        right: .5rem;
+        top: .5rem;
+        background-color: lighten($color: $jungle-green-color, $amount: 70%);
+        color: $jungle-green-color;
+        padding: .125rem .5rem;
+        border-top-right-radius: 0;
+
+        &.partner-category-tag--gp {
+          background-color: lighten($color: $blue-bolt-color, $amount: 40%);
+          color: darken($blue-bolt-color, 20%);
+        }
+
+        @include md {
+          font-size: .7rem;
+        }
+      }
+
+      .partner-tag {
+        font-size: 1rem;
+        font-family: $heading-font;
+        font-weight: bold;
+        padding-bottom: 1rem;
+      }
+
+      small {
+        padding-bottom: 0;
+      }
+
+      @include md {
+        .partner-tag {
+          font-size: 1.125rem;
+        }
+      }
+    }
   }
+}
+
+#founders {
+  scroll-margin-top: 5rem;
+}
+
+#partners {
+  scroll-margin-top: 5rem;
 }
