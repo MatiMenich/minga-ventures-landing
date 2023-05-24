@@ -91,8 +91,12 @@
     display: grid;
     flex-grow: 1;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
+
+    @include md {
+      gap: 2rem;
+    }
 
     @include xl {
       margin-top: 0;
@@ -106,9 +110,13 @@
     order: 2;
     flex-grow: 1;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 2rem;
     margin-bottom: 5rem;
+
+    @include md {
+      gap: 2rem;
+    }
 
     @include xl {
       order: 1;
