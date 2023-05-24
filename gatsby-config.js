@@ -4,7 +4,8 @@
 module.exports = {
   siteMetadata: {
     title: `Minga Ventures`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://minga.ventures`,
+    description: `Llevamos tu empresa donde tiene que llegar.`,
   },
   plugins: [
     "gatsby-plugin-sass",
