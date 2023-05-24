@@ -36,7 +36,7 @@
     // height: 336px;
     height: 260px;
 
-    &::before {
+    &:before {
       background: $dark-jungle-color;
       backdrop-filter: initial;
     }
