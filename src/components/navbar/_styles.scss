@@ -1,13 +1,15 @@
 @import '../../styles/variables';
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:  calc(100% - 2rem);
   z-index: 20;
   align-items: center;
   border-radius: 1rem;
-  clip-path: polygon(0 0, 100% 0, 100% 80px, 0 80px);
-  transition: clip-path .2s ease;
+  height: 80px;
 
   .navbar__inner {
     display: flex;
@@ -17,10 +19,9 @@
     height: 80px;
   }
 
-  &:before {
+  .navbar__bg {
     background: rgba($dark-jungle-color, .7);
     backdrop-filter: blur(12px);
-    content: '';
     position: absolute;
     top: .5rem;
     left: .5rem;
@@ -31,12 +32,12 @@
   }
 
   &.navbar--active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    height: auto;
 
-    // &:before {
-    //   background: $dark-jungle-color;
-    //   backdrop-filter: initial;
-    // }
+    .navbar__bg {
+      background: $dark-jungle-color;
+      backdrop-filter: initial;
+    }
   }
 
   .navbar__logo {
@@ -51,7 +52,7 @@
   }
 
   .navbar__mobile-menu {
-    height: 182px;
+    overflow: hidden;
   }
 
   .navbar__hamburger-menu {

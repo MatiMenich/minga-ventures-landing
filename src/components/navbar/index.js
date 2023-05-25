@@ -1,4 +1,5 @@
 import React from 'react'
+import { Flipper, Flipped } from 'react-flip-toolkit'
 
 import './_styles.scss'
 
@@ -15,22 +16,32 @@ const NavLinks = ({className, onLinkClick}) =>
 export default function Navbar({toggleMobileSidebar, isMobileSidebarOpen}) {
 
   return (
-    <div className={`container navbar ${isMobileSidebarOpen ? 'navbar--active' : ''}`}>
-      <div className='navbar__inner'>
-        <a href="#hero" className='navbar__logo'><img src={logo} alt="Minga Ventures logo"/></a>
+    <Flipper flipKey={isMobileSidebarOpen} spring={{stiffness: 300, damping: 30 }}>
 
-        <svg onClick={toggleMobileSidebar} width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='navbar__hamburger-menu'>
-          <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
+        <div className={`container navbar ${isMobileSidebarOpen ? 'navbar--active' : ''}`}>
+          <Flipped flipId="navbar">
+            <div className='navbar__bg'/>
+          </Flipped>
+          <div className='navbar__inner'>
+            <a href="#hero" className='navbar__logo'><img src={logo} alt="Minga Ventures logo"/></a>
 
-        <NavLinks/>
-      </div>
+            <svg onClick={toggleMobileSidebar} width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='navbar__hamburger-menu'>
+              <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
 
-      <div className='navbar__mobile-menu' style={{display: isMobileSidebarOpen ? 'block' : 'none'}}>
-        <NavLinks className='navbar__mobile-menu-links' onLinkClick={toggleMobileSidebar}/>
+            <NavLinks/>
+          </div>
 
-        {/* <a href="https://google.com" className="button-cta" target='_blank'>Postula ahora &gt;</a> */}
-      </div>
-    </div>
+          <Flipped flipId="navbar-link">
+            <div className='navbar__mobile-menu' style={{height: isMobileSidebarOpen ? '182px' : 0}}>
+              <NavLinks className='navbar__mobile-menu-links' onLinkClick={toggleMobileSidebar}/>
+
+              {/* <a href="https://google.com" className="button-cta" target='_blank'>Postula ahora &gt;</a> */}
+            </div>
+          </Flipped>
+
+        </div>
+
+    </Flipper>
   )
 }

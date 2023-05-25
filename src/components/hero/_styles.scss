@@ -4,6 +4,7 @@
 $hero-padding: 15rem;
 
 .hero {
+  margin-top: 80px;
   background-color: $seashell-color;
   color: $dark-jungle-color;
   padding-top: math.div($hero-padding, 2);
