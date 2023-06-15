@@ -1,45 +1,46 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import NotFound from "../components/NotFound"
 
 const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  color: "#fbf5ef",
+  textAlign: 'center',
+  padding: '0 2rem',
+  position: 'relative',
+  height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 }
 const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
+  marginTop: '4rem',
+  marginBottom: 24,
 }
 
 const paragraphStyles = {
   marginBottom: 48,
 }
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
 
 const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+
+      <br/>
+      <br/>
+      <div>
+      <h1 style={headingStyles}>No encontramos lo que buscabas</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Lo sentimos 😔, puede que la página que buscas esté <i>flotando por ahí...</i>
         <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <br />
+
+
+        <Link to="/">Llévame al inicio por favor &gt;</Link>
       </p>
+      </div>
+      <NotFound/>
     </main>
   )
 }
