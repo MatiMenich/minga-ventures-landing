@@ -139,7 +139,7 @@ export default function Founders() {
               <p>{partner.name}</p>
               <small>{partner.company}</small>
               <p className='partner-tag'>{partner.tag}</p>
-              <div className={`partner-category-tag ${partner.generalPartner ? 'partner-category-tag--gp' : ''}`}>{partner.generalPartner ? 'General partner' : 'Venture partner'}</div>
+              <div className={`partner-category-tag ${partner.generalPartner ? 'partner-category-tag--gp' : ''}`}>{partner.generalPartner ? 'General partner' : 'Limited partner'}</div>
             </a>
             )
           }

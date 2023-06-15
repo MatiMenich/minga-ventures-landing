@@ -36,7 +36,6 @@ const NotFoundPage = () => {
         <br />
         <br />
 
-
         <Link to="/">Llévame al inicio por favor &gt;</Link>
       </p>
       </div>
