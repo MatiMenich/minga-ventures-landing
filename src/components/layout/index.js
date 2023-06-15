@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
 import Navbar from "../navbar"
-import Backdrop from '../backdrop'
 
 import './_styles.scss'
 
@@ -21,11 +20,6 @@ export default function Layout({children}) {
   return (
     <div className="minga-ventures">
       <Navbar toggleMobileSidebar={toggleMobileSidebar} isMobileSidebarOpen={isMobileSidebarOpen} />
-{/*
-      <Backdrop
-        show={isMobileSidebarOpen}
-        onClick={toggleMobileSidebar}
-      /> */}
 
       <main className={isMobileSidebarOpen ? 'mobile-sidebar--active' : ''}>
         {children}
