@@ -147,7 +147,7 @@ export default function Founders() {
 
         <div className='partners__description'>
           <h2>Nuestr@s <b>partners</b></h2>
-          <p>Los fundadores y fundadoras necesitan más que capital para construir una gran empresa. Se necesita gente que entienda el viaje emprendedor y que sepa lo que se necesita, en especial al principio. Es por eso que <b>todos nuestros partners fueron o son activamente emprendedores</b>.</p>
+          <p>Los fundadores y fundadoras necesitan más que capital para construir una gran empresa. Se necesita gente que entienda el viaje emprendedor y que sepa lo que se necesita, en especial al principio. Es por eso que <b>todos nuestr@s partners fueron o son activamente emprendedores</b>.</p>
         </div>
       </div>
     </section>
