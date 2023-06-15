@@ -19,6 +19,7 @@
 
   h2 {
     margin-top: 0;
+    letter-spacing: -2px;
 
     @include md {
       font-size: 2rem;

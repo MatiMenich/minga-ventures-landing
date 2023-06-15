@@ -109,8 +109,8 @@ export default function Founders() {
 
       <div className="container" id="founders">
         <div className='founders__description'>
-          <h2>Nuestros fundadores</h2>
-          <p>Nos enorgullecemos de respaldar a los que son los catalizadores de la innovación y los arquitectos de empresas disruptivas. Su visión única, experiencia y determinación son fundamentales para construir el éxito. </p>
+          <h2>Nuestr@s fundadores</h2>
+          <p>Nos <b>enorgullecemos de respaldar</b> a las catalizadoras y catalizadores de la innovación y son arquitectos de empresas disruptivas. Su visión única, experiencia y determinación son fundamentales para construir el éxito. </p>
         </div>
         <div className='founders__list'>
           {
@@ -146,8 +146,8 @@ export default function Founders() {
         </div>
 
         <div className='partners__description'>
-          <h2>Nuestros <b>partners</b></h2>
-          <p>Los fundadores necesitan más que capital para construir una gran empresa. Se necesita gente que entienda el viaje emprendedor y que sepa lo que se necesita, en especial al principio. Es por eso que <b>todos nuestros partners fueron o son activamente emprendedores</b>.</p>
+          <h2>Nuestr@s <b>partners</b></h2>
+          <p>Los fundadores y fundadoras necesitan más que capital para construir una gran empresa. Se necesita gente que entienda el viaje emprendedor y que sepa lo que se necesita, en especial al principio. Es por eso que <b>todos nuestros partners fueron o son activamente emprendedores</b>.</p>
         </div>
       </div>
     </section>
