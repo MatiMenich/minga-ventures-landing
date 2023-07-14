@@ -192,9 +192,14 @@
         padding: .125rem .5rem;
         border-top-right-radius: 0;
 
-        &.partner-category-tag--gp {
+        &.partner-tag--gp {
           background-color: lighten($color: $blue-bolt-color, $amount: 40%);
           color: darken($blue-bolt-color, 20%);
+        }
+
+        &.partner-tag--vp {
+          background-color: lighten($color: $pastel-brown-color, $amount: 40%);
+          color: darken($pastel-brown-color, 20%);
         }
 
         @include md {

@@ -4,6 +4,7 @@ import './_styles.scss'
 import ScrollingBanner from '../scrolling banner'
 import Blob from '../blob'
 import cristobalGrifferoImg from './cristobalgriffero.jpg'
+import barbaraCovarrubiasImg from './barbaracovarrubias.jpg'
 import javierBenavidesImg from './javierbenavides.jpg'
 import nicolasChaconImg from './nicolaschacon.jpg'
 import lukasZorichImg from './lukaszorich.jpg'
@@ -15,6 +16,30 @@ import mijaelFeldmanImg from './mijaelfeldman.jpg'
 import anibalMadridImg from './anibalmadrid.jpg'
 import felipeOvalleImg from './felipeovalle.jpg'
 import luisQuevedoImg from './luisQuevedo.jpg'
+
+function PartnerTag({partnerType}) {
+  let partnerClass
+  let partnerText
+
+  switch (partnerType) {
+    case 'general':
+      partnerClass = 'partner-tag--gp'
+      partnerText = 'General partner'
+      break;
+    case 'limited':
+      partnerClass = 'partner-tag--lp'
+      partnerText = 'Limited partner'
+      break;
+    case 'venture':
+      partnerClass = 'partner-tag--vp'
+      partnerText = 'Venture partner'
+      break;
+  }
+
+  return  <div className={`partner-category-tag ${partnerClass}`}>
+    { partnerText }
+  </div>
+}
 
 export default function Founders() {
 
@@ -49,15 +74,23 @@ export default function Founders() {
     {
       name: 'Francisco Barreda',
       image: franciscoBarredaImg,
-      generalPartner: true,
+      partnerType: 'general',
       tag: 'Legal Tech',
       company: 'Barreda Legal Tech',
       linkedinProfile: 'https://www.linkedin.com/in/francisco-barreda-22477157/',
     },
     {
+      name: 'Barbara Covarrubias',
+      image: barbaraCovarrubiasImg,
+      partnerType: 'venture',
+      tag: 'Innovation / Media',
+      company: 'Inversiones Grupo ISC',
+      linkedinProfile: 'https://www.linkedin.com/in/barbaracovarrubias/',
+    },
+    {
       name: 'Mijael Feldman',
       image: mijaelFeldmanImg,
-      generalPartner: false,
+      partnerType: 'limited',
       tag: 'Finance',
       company: 'getxerpa',
       linkedinProfile: 'https://www.linkedin.com/in/mijaelfeldman/',
@@ -65,7 +98,7 @@ export default function Founders() {
     {
       name: 'Rodrigo Lafuente',
       image: rodrigoLafuenteImg,
-      generalPartner: true,
+      partnerType: 'general',
       tag: 'VC / Tech',
       company: 'ISC / Methodo',
       linkedinProfile: 'https://www.linkedin.com/in/rodrigolafuentes/',
@@ -73,7 +106,7 @@ export default function Founders() {
     {
       name: 'Anibal Madrid',
       image: anibalMadridImg,
-      generalPartner: false,
+      partnerType: 'limited',
       tag: 'Hardtech',
       company: 'SoyMomo',
       linkedinProfile: 'https://www.linkedin.com/in/anibalmadrid/',
@@ -81,7 +114,7 @@ export default function Founders() {
     {
       name: 'Matías Menich',
       image: matiasMenichImg,
-      generalPartner: true,
+      partnerType: 'general',
       tag: 'Fintech',
       company: 'QVO / Kushki',
       linkedinProfile: 'https://www.linkedin.com/in/matimenich/',
@@ -89,7 +122,7 @@ export default function Founders() {
     {
       name: 'Felipe Ovalle',
       image: felipeOvalleImg,
-      generalPartner: false,
+      partnerType: 'limited',
       tag: 'Logistics',
       company: 'Spread',
       linkedinProfile: 'https://www.linkedin.com/in/felipeovalleo/',
@@ -97,7 +130,7 @@ export default function Founders() {
     {
       name: 'Dr. Luis Quevedo',
       image: luisQuevedoImg,
-      generalPartner: false,
+      partnerType: 'limited',
       tag: 'Medtech',
       company: 'ICOR',
       linkedinProfile: 'https://www.linkedin.com/in/luis-quevedo-6204979a/',
@@ -105,7 +138,7 @@ export default function Founders() {
     {
       name: 'Óscar Quevedo',
       image: oscarQuevedoImg,
-      generalPartner: true,
+      partnerType: 'general',
       tag: 'Marketing / Cultura',
       company: 'QVO / Kushki',
       linkedinProfile: 'https://www.linkedin.com/in/oquevedo/',
@@ -148,7 +181,7 @@ export default function Founders() {
               <p>{partner.name}</p>
               <small>{partner.company}</small>
               <p className='partner-tag'>{partner.tag}</p>
-              <div className={`partner-category-tag ${partner.generalPartner ? 'partner-category-tag--gp' : ''}`}>{partner.generalPartner ? 'General partner' : 'Limited partner'}</div>
+              <PartnerTag partnerType={partner.partnerType}/>
             </a>
             )
           }
