@@ -14,6 +14,7 @@ import rodrigoLafuenteImg from './rodrigolafuente.jpg'
 import mijaelFeldmanImg from './mijaelfeldman.jpg'
 import anibalMadridImg from './anibalmadrid.jpg'
 import felipeOvalleImg from './felipeovalle.jpg'
+import luisQuevedoImg from './luisQuevedo.jpg'
 
 export default function Founders() {
 
@@ -92,6 +93,14 @@ export default function Founders() {
       tag: 'Logistics',
       company: 'Spread',
       linkedinProfile: 'https://www.linkedin.com/in/felipeovalleo/',
+    },
+    {
+      name: 'Dr. Luis Quevedo',
+      image: luisQuevedoImg,
+      generalPartner: false,
+      tag: 'Medtech',
+      company: 'ICOR',
+      linkedinProfile: 'https://www.linkedin.com/in/luis-quevedo-6204979a/',
     },
     {
       name: 'Óscar Quevedo',
