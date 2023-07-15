@@ -15,7 +15,7 @@ import rodrigoLafuenteImg from './rodrigolafuente.jpg'
 import mijaelFeldmanImg from './mijaelfeldman.jpg'
 import anibalMadridImg from './anibalmadrid.jpg'
 import felipeOvalleImg from './felipeovalle.jpg'
-import luisQuevedoImg from './luisQuevedo.jpg'
+import luisQuevedoImg from './luisquevedo.jpg'
 
 function PartnerTag({partnerType}) {
   let partnerClass
