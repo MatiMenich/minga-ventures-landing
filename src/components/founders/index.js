@@ -16,6 +16,7 @@ import mijaelFeldmanImg from './mijaelfeldman.jpg'
 import anibalMadridImg from './anibalmadrid.jpg'
 import felipeOvalleImg from './felipeovalle.jpg'
 import luisQuevedoImg from './luisquevedo.jpg'
+import ianLeeImg from './ianlee.jpg'
 
 function PartnerTag({partnerType}) {
   let partnerClass
@@ -102,6 +103,14 @@ export default function Founders() {
       tag: 'VC / Tech',
       company: 'ISC / Methodo',
       linkedinProfile: 'https://www.linkedin.com/in/rodrigolafuentes/',
+    },
+    {
+      name: 'Ian Lee',
+      image: ianLeeImg,
+      partnerType: 'limited',
+      tag: 'Healthtech',
+      company: 'Examedi',
+      linkedinProfile: 'https://www.linkedin.com/in/ian-lee13/',
     },
     {
       name: 'Anibal Madrid',
