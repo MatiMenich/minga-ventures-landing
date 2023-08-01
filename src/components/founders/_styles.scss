@@ -119,14 +119,18 @@
 
     @include md {
       gap: 2rem;
+      grid-template-columns: repeat(3, 1fr);
     }
 
     @include xl {
       order: 1;
       margin-top: 0;
       margin-right: 2rem;
-      grid-template-columns: repeat(3, 1fr);
+      // gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
     }
+
+
   }
 
   .founder-card {
@@ -151,7 +155,7 @@
       min-height: 200px;
 
       @include md {
-        min-height: 310px;
+        min-height: 320px;
       }
     }
 
@@ -159,7 +163,7 @@
       margin: 0;
       padding: 1rem;
       padding-bottom: .125rem;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     small {
@@ -180,6 +184,22 @@
     }
 
     &.partner-card {
+
+      @include md {
+        p {
+          font-size: 1.3rem;
+        }
+        small {
+          font-size: 1rem;
+        }
+      }
+
+      @include md {
+        img {
+          min-height: 240px;
+        }
+      }
+
       .partner-category-tag {
         position: absolute;
         font-size: .6rem;

@@ -85,7 +85,7 @@ export default function Founders() {
       image: barbaraCovarrubiasImg,
       partnerType: 'venture',
       tag: 'Innovation / Media',
-      company: 'Inversiones Grupo ISC',
+      company: 'Inv. Grupo ISC',
       linkedinProfile: 'https://www.linkedin.com/in/barbaracovarrubias/',
     },
     {
