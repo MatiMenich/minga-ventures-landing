@@ -1,0 +1,74 @@
+@import '../../styles/variables';
+
+.faq-section {
+  padding: 10rem 0;
+  position: relative;
+  z-index: 2;
+
+  .blob {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+    z-index: -1;
+    height: 60%;
+    width: 30%;
+    transform: rotate(20deg);
+    background: linear-gradient(10deg, $blue-bolt-color, $dark-jungle-color);
+  }
+
+  .container {
+    @include lg {
+      max-width: 50%;
+    }
+  }
+  h2 {
+    margin-bottom: 3rem;
+
+    @include md {
+      font-size: 2rem;
+    }
+  }
+}
+
+.collapsible {
+  border: 1px solid $seashell-color;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(10deg, rgba($dark-jungle-color, 60%), $dark-jungle-color),
+    url(./noise.svg);
+
+  &:after {
+    content: '>';
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $seashell-color;
+    z-index: 2;
+    transition: all .2s ease;
+  }
+
+  &.collapsible--open {
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+
+  h3 {
+    font-weight: 1.5rem;
+  }
+
+  .collapsible__content {
+    overflow: hidden;
+      transition: height ease-in-out .3s;
+
+    .collapsible__content-inner {
+      padding: 1rem;
+    }
+  }
+}

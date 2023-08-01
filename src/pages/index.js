@@ -8,6 +8,7 @@ import Founders from "../components/founders"
 import Portfolio from "../components/portfolio"
 import Layout from "../components/layout"
 import SEO from "../components/SEO"
+import FAQ from "../components/FAQ"
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Mission/>
       <Founders/>
       <Portfolio/>
+      <FAQ/>
       <Footer/>
     </Layout>
   )

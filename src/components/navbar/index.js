@@ -11,6 +11,7 @@ const NavLinks = ({className, onLinkClick}) =>
     <a href="#founders" className="navbar__link" onClick={onLinkClick}>Fundadores</a>
     <a href="#partners" className="navbar__link" onClick={onLinkClick}>Partners</a>
     <a href="#portfolio" className="navbar__link" onClick={onLinkClick}>Portafolio</a>
+    <a href="#faq" className="navbar__link" onClick={onLinkClick}>FAQ</a>
   </div>
 
 export default function Navbar({toggleMobileSidebar, isMobileSidebarOpen}) {
