@@ -9,7 +9,7 @@ function Collapsible({children, title, isOpen}) {
 
   return (
 
-      <div className={`collapsible ${open ? 'collapsible--open': ''}`} onClick={() => setOpen(!open)}>
+      <button className={`collapsible ${open ? 'collapsible--open': ''}`} onClick={() => setOpen(!open)}>
         <h3>{title}</h3>
         <div className={`collapsible__content`} ref={contentRef}
               style={open ? { height: contentRef.current.scrollHeight + "px" } : { height: "0px" }} >
@@ -17,7 +17,7 @@ function Collapsible({children, title, isOpen}) {
               {children}
             </div>
         </div>
-      </div>
+      </button>
   )
 }
 
