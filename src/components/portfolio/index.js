@@ -4,6 +4,7 @@ import './_styles.scss'
 
 import fintocLogo from './fintoc-logo.png'
 import neatLogo from './neat-logo.png'
+import xpenditLogo from './xpendit-logo.png'
 
 export default function Portfolio() {
   const companies = [
@@ -20,6 +21,13 @@ export default function Portfolio() {
       year: '2023',
       image: neatLogo,
       website: 'https://neatpagos.com?utm_source=mingaventures',
+    },
+    {
+      name: 'Xpendit',
+      industry: 'Fintech',
+      year: '2023',
+      image: xpenditLogo,
+      website: 'https://www.xpendit.com?utm_source=mingaventures',
     }
   ]
 

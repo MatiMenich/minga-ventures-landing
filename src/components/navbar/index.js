@@ -34,7 +34,7 @@ export default function Navbar({toggleMobileSidebar, isMobileSidebarOpen}) {
           </div>
 
           <Flipped flipId="navbar-link">
-            <div className='navbar__mobile-menu' style={{height: isMobileSidebarOpen ? '182px' : 0}}>
+            <div className='navbar__mobile-menu' style={{height: isMobileSidebarOpen ? '220px' : 0}}>
               <NavLinks className='navbar__mobile-menu-links' onLinkClick={toggleMobileSidebar}/>
 
               {/* <a href="https://google.com" className="button-cta" target='_blank'>Postula ahora &gt;</a> */}

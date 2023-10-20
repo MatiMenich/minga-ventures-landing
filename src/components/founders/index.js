@@ -3,20 +3,24 @@ import React from 'react'
 import './_styles.scss'
 import ScrollingBanner from '../scrolling banner'
 import Blob from '../blob'
-import cristobalGrifferoImg from './cristobalgriffero.jpg'
-import barbaraCovarrubiasImg from './barbaracovarrubias.jpg'
-import javierBenavidesImg from './javierbenavides.jpg'
-import nicolasChaconImg from './nicolaschacon.jpg'
-import lukasZorichImg from './lukaszorich.jpg'
-import franciscoBarredaImg from './franciscobarreda.jpg'
-import oscarQuevedoImg from './oscarquevedo.jpg'
-import matiasMenichImg from './matiasmenich.jpg'
-import rodrigoLafuenteImg from './rodrigolafuente.jpg'
-import mijaelFeldmanImg from './mijaelfeldman.jpg'
-import anibalMadridImg from './anibalmadrid.jpg'
-import felipeOvalleImg from './felipeovalle.jpg'
-import luisQuevedoImg from './luisquevedo.jpg'
-import ianLeeImg from './ianlee.jpg'
+import cristobalGrifferoImg from './img/cristobalgriffero.jpg'
+import barbaraCovarrubiasImg from './img/barbaracovarrubias.jpg'
+import javierBenavidesImg from './img/javierbenavides.jpg'
+import nicolasChaconImg from './img/nicolaschacon.jpg'
+import lukasZorichImg from './img/lukaszorich.jpg'
+import franciscoBarredaImg from './img/franciscobarreda.jpg'
+import oscarQuevedoImg from './img/oscarquevedo.jpg'
+import matiasMenichImg from './img/matiasmenich.jpg'
+import rodrigoLafuenteImg from './img/rodrigolafuente.jpg'
+import mijaelFeldmanImg from './img/mijaelfeldman.jpg'
+import anibalMadridImg from './img/anibalmadrid.jpg'
+import felipeOvalleImg from './img/felipeovalle.jpg'
+import luisQuevedoImg from './img/luisquevedo.jpg'
+import ianLeeImg from './img/ianlee.jpg'
+import felipePuntarelliImg from './img/felipepuntarelli.jpg'
+import nicolasRamosImg from './img/nicolasramos.jpg'
+import diegoPhilippiImg from './img/diegophilippi.jpg'
+import martinDelCastilloImg from './img/martindelcastillo.jpg'
 
 function PartnerTag({partnerType}) {
   let partnerClass
@@ -34,6 +38,9 @@ function PartnerTag({partnerType}) {
     case 'venture':
       partnerClass = 'partner-tag--vp'
       partnerText = 'Venture partner'
+      break;
+    default:
+      throw new Error(`Unknown partner type: ${partnerType}`)
       break;
   }
 
@@ -58,10 +65,34 @@ export default function Founders() {
       linkedinProfile: 'https://www.linkedin.com/in/nicol%C3%A1s-chac%C3%B3n/',
     },
     {
+      name: 'Martin Del Castillo',
+      image: martinDelCastilloImg,
+      company: 'Xpendit',
+      linkedinProfile: 'https://www.linkedin.com/in/mart%C3%ADn-del-castillo/',
+    },
+    {
       name: 'Cristobal Griffero',
       image: cristobalGrifferoImg,
       company: 'Fintoc',
       linkedinProfile: 'https://www.linkedin.com/in/chipa-mogli/',
+    },
+    {
+      name: 'Diego Philippi',
+      image: diegoPhilippiImg,
+      company: 'Xpendit',
+      linkedinProfile: 'https://www.linkedin.com/in/diegophilippi/',
+    },
+    {
+      name: 'Felipe Puntarelli',
+      image: felipePuntarelliImg,
+      company: 'Xpendit',
+      linkedinProfile: 'https://www.linkedin.com/in/felipe-puntarelli-99a73425/',
+    },
+    {
+      name: 'Nicolas Ramos',
+      image: nicolasRamosImg,
+      company: 'Xpendit',
+      linkedinProfile: 'https://www.linkedin.com/in/nicolas-jose-ramos/',
     },
     {
       name: 'Lukas Zorich',
@@ -186,7 +217,7 @@ export default function Founders() {
           {
             partnersList.map((partner) =>
             <a className="founder-card partner-card" key={partner.name} href={partner.linkedinProfile} target='_blank' rel="noreferrer">
-              <img src={partner.image} alt=""/>
+              <img src={partner.image} alt={`${partner.name}`}/>
               <p>{partner.name}</p>
               <small>{partner.company}</small>
               <p className='partner-tag'>{partner.tag}</p>

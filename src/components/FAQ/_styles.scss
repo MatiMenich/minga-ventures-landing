@@ -1,7 +1,12 @@
 @import '../../styles/variables';
 
 .faq-section {
-  padding: 10rem 0;
+  padding: 5rem 0;
+
+  @include md {
+    padding: 10rem 0;
+  }
+
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -11,8 +16,8 @@
     top: 25%;
     right: 25%;
     z-index: -1;
-    height: 60%;
-    width: 30%;
+    height: 800px;
+    width: 500px;
     transform: rotate(20deg);
     background: linear-gradient(10deg, $blue-bolt-color, $dark-jungle-color);
   }
