@@ -6,7 +6,7 @@ $jungle-green-color: #1A3635;
 $pastel-brown-color: #8A6A5C;
 
 // Variables
-$container-max-width: 1400px;
+$container-max-width: 1600px;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -31,6 +31,9 @@ $screen-xl-min: 1200px;
 // XXL Desktops
 $screen-xxl-min: 1400px;
 
+// XXXL Desktops
+$screen-xxxl-min: 1600px;
+
 
 $screen-sizes: (
   "sm": $screen-sm-min,
@@ -38,6 +41,7 @@ $screen-sizes: (
   "lg": $screen-lg-min,
   "xl": $screen-xl-min,
   "xxl": $screen-xxl-min,
+  "xxxl": $screen-xxxl-min,
 );
 
 // Small devices
@@ -71,6 +75,13 @@ $screen-sizes: (
 // Extra xtra large devices
 @mixin xxl {
   @media (min-width: #{$screen-xxl-min}) {
+      @content;
+  }
+}
+
+// Extra xtra xtra large devices
+@mixin xxxl {
+  @media (min-width: #{$screen-xxxl-min}) {
       @content;
   }
 }

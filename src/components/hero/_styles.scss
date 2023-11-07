@@ -19,7 +19,6 @@ $hero-padding: 15rem;
     }
   }
 
-
   @include lg {
     padding-top: $hero-padding;
   }
@@ -27,6 +26,10 @@ $hero-padding: 15rem;
   .container {
     display: flex;
     flex-direction: column;
+
+    @include xxxl {
+      align-items: center;
+    }
   }
 
   .blob {

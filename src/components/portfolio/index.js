@@ -34,7 +34,7 @@ export default function Portfolio() {
   return (
     <section className='portfolio' id="portfolio">
       <div className="container">
-        <h2>Nuestro Portafolio</h2>
+        <h2>Nuestro portafolio</h2>
         <div className="company-list">
           {
             companies.map((company) => (

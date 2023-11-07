@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 
 import './_styles.scss'
-import Blob from '../blob'
+import bgImg from './bg.png'
 
 function Collapsible({children, title, isOpen}) {
   const [open, setOpen] = useState(isOpen)
@@ -68,7 +68,7 @@ export default function FAQ() {
           </Collapsible>
         ))}
       </div>
-      <Blob/>
+      <div style={{backgroundImage: `url(${bgImg})`}} className='blob-bg'/>
     </section>
   )
 }

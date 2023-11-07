@@ -9,7 +9,7 @@
       $seashell-color,
     );
 		// gradient($jungle-green-color, $pastel-brown-color, 20deg);
-	filter: url(#grainy-blur) /* the magic */
+  filter: url('#grainy-blur')
 }
 
 .svgblob {
