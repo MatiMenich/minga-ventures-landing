@@ -17,11 +17,11 @@ import anibalMadridImg from './img/anibalmadrid.jpg'
 import felipeOvalleImg from './img/felipeovalle.jpg'
 import luisQuevedoImg from './img/luisquevedo.jpg'
 import ianLeeImg from './img/ianlee.jpg'
-
 import felipePuntarelliImg from './img/felipepuntarelli.jpg'
 import nicolasRamosImg from './img/nicolasramos.jpg'
 import diegoPhilippiImg from './img/diegophilippi.jpg'
 import martinDelCastilloImg from './img/martindelcastillo.jpg'
+import fernandoReyesImg from './img/fernandoreyes.jpg'
 
 // import filterImg from './img/filter.svg'
 
@@ -33,16 +33,22 @@ const foundersList = [
     linkedinProfile: 'https://www.linkedin.com/in/jabenavi/',
   },
   {
+    name: 'Martin Del Castillo',
+    image: martinDelCastilloImg,
+    company: 'Xpendit',
+    linkedinProfile: 'https://www.linkedin.com/in/mart%C3%ADn-del-castillo/',
+  },
+  {
     name: 'Nicolás Chacón',
     image: nicolasChaconImg,
     company: 'Neat',
     linkedinProfile: 'https://www.linkedin.com/in/nicol%C3%A1s-chac%C3%B3n/',
   },
   {
-    name: 'Martin Del Castillo',
-    image: martinDelCastilloImg,
-    company: 'Xpendit',
-    linkedinProfile: 'https://www.linkedin.com/in/mart%C3%ADn-del-castillo/',
+    name: 'Mijael Feldman',
+    image: mijaelFeldmanImg,
+    company: 'getxerpa',
+    linkedinProfile: 'https://www.linkedin.com/in/mijaelfeldman/',
   },
   {
     name: 'Cristobal Griffero',
@@ -69,6 +75,12 @@ const foundersList = [
     linkedinProfile: 'https://www.linkedin.com/in/nicolas-jose-ramos/',
   },
   {
+    name: 'Fernando Reyes',
+    image: fernandoReyesImg,
+    company: 'getxerpa',
+    linkedinProfile: 'https://www.linkedin.com/in/ferreyesv/',
+  },
+  {
     name: 'Lukas Zorich',
     image: lukasZorichImg,
     company: 'Fintoc',
@@ -93,14 +105,6 @@ const partnersList = [
     tag: 'Innovation / Media',
     company: 'Inv. Grupo ISC',
     linkedinProfile: 'https://www.linkedin.com/in/barbaracovarrubias/',
-  },
-  {
-    name: 'Mijael Feldman',
-    image: mijaelFeldmanImg,
-    partnerType: 'limited',
-    tag: 'Finance',
-    company: 'getxerpa',
-    linkedinProfile: 'https://www.linkedin.com/in/mijaelfeldman/',
   },
   {
     name: 'Rodrigo Lafuente',

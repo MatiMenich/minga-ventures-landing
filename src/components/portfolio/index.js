@@ -5,6 +5,7 @@ import './_styles.scss'
 import fintocLogo from './fintoc-logo.png'
 import neatLogo from './neat-logo.png'
 import xpenditLogo from './xpendit-logo.png'
+import getxerpaLogo from './getxerpa-logo.png'
 
 export default function Portfolio() {
   const companies = [
@@ -28,6 +29,13 @@ export default function Portfolio() {
       year: '2023',
       image: xpenditLogo,
       website: 'https://www.xpendit.com?utm_source=mingaventures',
+    },
+    {
+      name: 'Getxerpa',
+      industry: 'Fintech',
+      year: '2024',
+      image: getxerpaLogo,
+      website: 'https://www.getxerpa.com?utm_source=mingaventures',
     }
   ]
 
