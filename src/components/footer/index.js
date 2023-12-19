@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container d-flex align-items-center justify-content-between">
 
           <img src={LogoIMG} alt="Minga Ventures Logo Alt"/>
-          <p>Minga Ventures© 2023</p>
+          <p>Minga Ventures© 2023-2024</p>
 
         {/* <div className='footer__links'>
           <a href="#a" className="footer__link">Press Kit</a>
