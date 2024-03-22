@@ -13,10 +13,10 @@ import oscarQuevedoImg from './img/oscarquevedo.jpg'
 import matiasMenichImg from './img/matiasmenich.jpg'
 import rodrigoLafuenteImg from './img/rodrigolafuente.jpg'
 import mijaelFeldmanImg from './img/mijaelfeldman.jpg'
-import anibalMadridImg from './img/anibalmadrid.jpg'
+// import anibalMadridImg from './img/anibalmadrid.jpg'
 import felipeOvalleImg from './img/felipeovalle.jpg'
 import luisQuevedoImg from './img/luisquevedo.jpg'
-import ianLeeImg from './img/ianlee.jpg'
+// import ianLeeImg from './img/ianlee.jpg'
 import felipePuntarelliImg from './img/felipepuntarelli.jpg'
 import nicolasRamosImg from './img/nicolasramos.jpg'
 import diegoPhilippiImg from './img/diegophilippi.jpg'
@@ -122,14 +122,14 @@ const partnersList = [
   //   company: 'Examedi',
   //   linkedinProfile: 'https://www.linkedin.com/in/ian-lee13/',
   // },
-  {
-    name: 'Anibal Madrid',
-    image: anibalMadridImg,
-    partnerType: 'venture',
-    tag: 'Hardtech',
-    company: 'SoyMomo',
-    linkedinProfile: 'https://www.linkedin.com/in/anibalmadrid/',
-  },
+  // {
+  //   name: 'Anibal Madrid',
+  //   image: anibalMadridImg,
+  //   partnerType: 'venture',
+  //   tag: 'Hardtech',
+  //   company: 'SoyMomo',
+  //   linkedinProfile: 'https://www.linkedin.com/in/anibalmadrid/',
+  // },
   {
     name: 'Matías Menich',
     image: matiasMenichImg,
